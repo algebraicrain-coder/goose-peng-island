@@ -1,0 +1,18 @@
+{
+  "name": "goose-peng-island",
+  "version": "1.0.0",
+  "description": "企鹅鹅 Peng · 环岛骑行 —— Three.js 全程序化 3D 影片式演示（无外部素材）",
+  "type": "module",
+  "scripts": {
+    "serve": "bash scripts/serve.sh",
+    "shot": "node scripts/shot.mjs http://127.0.0.1:8123/ build/shots",
+    "shots": "node scripts/shot.mjs http://127.0.0.1:8123/ build/shots 0 1 2 3 4 5 6 7",
+    "verify": "node scripts/shot.mjs http://127.0.0.1:8123/ build/shots 0 1 2 3 4 5 6 7",
+    "eval": "node scripts/eval.mjs http://127.0.0.1:8123/"
+  },
+  "keywords": ["three.js", "webgl", "procedural", "demo"],
+  "license": "MIT",
+  "dependencies": {
+    "three": "^0.186.1"
+  }
+}

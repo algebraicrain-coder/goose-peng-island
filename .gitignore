@@ -1,0 +1,13 @@
+# 依赖
+node_modules/
+
+# 生成物 / 自检截图
+build/
+
+# Python
+__pycache__/
+*.pyc
+
+# 编辑器 / 系统
+.DS_Store
+*.log

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>企鹅鹅 Peng · 环岛骑行 / Peng the Goose — Island Circuit</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%AA%BF%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="./src/styles.css" />
+<script type="importmap">
+{
+  "imports": {
+    "three": "./node_modules/three/build/three.module.js",
+    "three/addons/": "./node_modules/three/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+  <canvas id="stage"></canvas>
+
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="goose-mark">🪿</div>
+      <h1>企鹅鹅 Peng</h1>
+      <p class="subtitle">环岛骑行 · Island Circuit</p>
+      <div class="bar"><i id="loader-bar"></i></div>
+      <p class="status" id="loader-status">正在生长岛屿…</p>
+    </div>
+  </div>
+
+  <div id="hud" class="hud hidden">
+    <header class="hud-top">
+      <div class="brand">
+        <span class="mark">🪿</span>
+        <div class="brand-text">
+          <strong>Peng the Goose</strong>
+          <span>环岛骑行 · Island Circuit</span>
+        </div>
+      </div>
+      <div class="shot">
+        <span class="shot-label">镜头</span>
+        <span id="shot-name">—</span>
+      </div>
+    </header>
+
+    <aside class="hud-panel" id="panel">
+      <div class="row"><span>速度</span><b id="stat-speed">0.0</b></div>
+      <div class="row"><span>速度倍率</span><b id="stat-mul">×1.0</b></div>
+      <div class="row"><span>里程</span><b id="stat-dist">0</b></div>
+      <div class="row"><span>时刻</span><b id="stat-time">—</b></div>
+      <div class="row"><span>FPS</span><b id="stat-fps">—</b></div>
+    </aside>
+
+    <footer class="hud-bottom">
+      <div class="keys">
+        <kbd>1</kbd>–<kbd>8</kbd> 切换镜头
+        <kbd>[</kbd><kbd>]</kbd> 减速/加速
+        <kbd>Space</kbd> 暂停/继续
+        <kbd>F</kbd> 自由视角
+        <kbd>H</kbd> 隐藏界面
+      </div>
+    </footer>
+  </div>
+
+  <div id="fatal" class="fatal hidden"><pre id="fatal-msg"></pre></div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
